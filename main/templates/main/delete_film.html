@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+{% block content %}
+
+    <div class="features">
+        <h1 class="post-title">Delete Film</h1>
+        <form class="post-title" method="post">
+            {% csrf_token %}
+            {{ film.title }}?<br>
+            <br>
+            <button class="btn btn-success" type="submit">Delete film</button>
+        </form>
+    </div>
+
+{% endblock %}

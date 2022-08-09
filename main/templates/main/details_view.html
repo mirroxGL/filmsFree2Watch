@@ -1,0 +1,23 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+{% block content %}
+
+    <div class="detailed-film">
+        <img class="detailed-film__image" src="{{ article.image_url }}">
+        <div class="right-side">
+            <h1 class="right-side__title">{{ article.title }}</h1>
+            <p class="right-side__rating">Rating: {{ article.rating }}</p>
+            <p class="right-side__director">Director: {{ article.director }}</p>
+            <h2 class="right-side__description-label">Description:</h2>
+            <div class="right-side__description-text">{{ article.description }}</div>
+            <a href="{% url 'film-delete' article.id %}" class="button primary delete">Delete</a>
+            <a href="{% url 'film-update' article.id %}" class="button primary edit">Update</a>
+            <a href="{{ article.rezka_url }}"
+               class="description__watch">
+                <span>Watch free </span>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}
