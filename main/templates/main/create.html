@@ -3,6 +3,7 @@
 {% block content %}
 
     <div class="features">
+    <div class="features__wrapper">
         <h1 class="post-title">Posting</h1>
         <form method="post">
             {% csrf_token %}
@@ -15,7 +16,8 @@
             {{ form.rezka_url }}<br>
             <span>{{ error }}</span>
             <button class="btn btn-success" type="submit">Add film</button>
-        </form>
+        </form></div>
+
     </div>
 
 {% endblock %}

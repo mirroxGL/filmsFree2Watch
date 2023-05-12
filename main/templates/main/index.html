@@ -1,13 +1,13 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ua">
 
 <head>
-	<title>Главная</title>
+	<title>Główna strona</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../../static/main/css/style.css">
 	<link rel="shortcut icon" href="/static/main/img/favicon.ico">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
@@ -20,14 +20,15 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
+		<input type="checkbox" id="hamburger">
+				<label for="hamburger" class="hamburger">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</label>
 	<div class="header__row">
 		<div class="container">
 			<div class="header__menu menu">
-				<div class="menu__icon icon-menu">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
 				<nav class="menu__body">
 					<ul class="menu__list">
 						<li><a href="{% url 'index' %}" class="menu__link"><span>Top 100 films </span></a></li>
@@ -55,8 +56,8 @@
 					<div class="parallax__image">
 						<div class="parallax__mask">
 						</div>
-						<div class="parallax__label">The 100 best movies</div>
-						<h1 class="parallax__title">of all time</h1>
+
+						<h1 class="parallax__title">The 100 best movies <br>of all time</h1>
 					</div>
 				</div>
 			</div>
@@ -96,52 +97,15 @@
 				</div>
 			</div>
 		</div>
-		<footer class="footer">
-	<div class='container'>
-		<div class="footer__row">
+		
+	</div>
 
-		</div>
-	</div>
-</footer>
-	</div>
-	<div class="popup">
-	<div class="popup-table table">
-		<div class="cell">
-			<div class="popup-content">
-				<div class="popup-close"></div>
-				<div class="popup__title"></div>
-				<div class="popup__txt"></div>
-				<form action="#" class="popup-form form">
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input" />
-					</div>
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req email" />
-					</div>
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req" />
-					</div>
-					<div class="form-button">
-						<button type="submit" class="form__btn btn fw"></button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="popup popup-video">
-	<div class="popup-table table">
-		<div class="cell">
-			<div class="popup-close"></div>
-			<div class="popup-video__value video"></div>
-		</div>
-	</div>
-</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	{% comment %} <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
 <script src="js/vendors.js"></script>
 <script src="js/main.js"></script>
-<script src="js/custom.js" ></script>
+ {% endcomment %}
+<script src="../../static/main/js/custom.js"></script>
 
 </body>
 
